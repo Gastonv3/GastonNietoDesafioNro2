@@ -1,0 +1,32 @@
+<div class="row g-0">
+    <div class="col-12">
+    <div class="contenedor ">
+
+        <div class="card">
+            <div class="card-header">
+                Clase B
+            </div>
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Nota</th>
+                        <th scope="col">Estado</th>
+                    </tr>
+                    </thead>
+                    <tbody *ngFor="let item of this.claseA; index as i">
+                    <tr>
+                        <th class="table-primary">{{i+ 1}}</th>
+                        <td class="table-primary">{{item.nombre}}</td>
+                        <td class="table-primary">{{item.nota}}</td>
+                        <td class="table-primary" [ngClass]="{'table-danger': item.estado == 'Reprobado','table-success': item.estado == 'Aprobado'}">{{item.estado}}</td>
+                    </tr>
+                    </tbody>
+                </table> 
+            </div>
+          </div>
+      
+    </div>
+</div>
